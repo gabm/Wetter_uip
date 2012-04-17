@@ -1,0 +1,598 @@
+Archive member included because of file (symbol)
+
+/usr/lib/gcc/avr/4.7.0/avr4/libgcc.a(_exit.o)
+                              /usr/lib/gcc/avr/4.7.0/../../../../avr/lib/avr4/crtm8.o (exit)
+/usr/lib/gcc/avr/4.7.0/avr4/libgcc.a(_copy_data.o)
+                              ./uip/uip_arp.o (__do_copy_data)
+/usr/lib/gcc/avr/4.7.0/avr4/libgcc.a(_clear_bss.o)
+                              ./uip/uip.o (__do_clear_bss)
+/usr/lib/gcc/avr/4.7.0/../../../../avr/lib/avr4/libc.a(memcpy_P.o)
+                              ./ethernet.o (memcpy_P)
+/usr/lib/gcc/avr/4.7.0/../../../../avr/lib/avr4/libc.a(memcpy.o)
+                              ./uip/uip.o (memcpy)
+/usr/lib/gcc/avr/4.7.0/../../../../avr/lib/avr4/libc.a(memset.o)
+                              ./uip/uip_arp.o (memset)
+
+Allocating common symbols
+Common symbol       size              file
+
+arp_timer           0x4               ./ethernet.o
+uip_len             0x2               ./uip/uip.o
+com_receive_buffer  0xd               ./com.o
+uip_sappdata        0x2               ./uip/uip.o
+uip_acc32           0x4               ./uip/uip.o
+NextPacketPtr       0x2               ./hardware/enc28j60.o
+uip_flags           0x1               ./uip/uip.o
+periodic_timer      0x4               ./ethernet.o
+uip_appdata         0x2               ./uip/uip.o
+uip_conn            0x2               ./uip/uip.o
+uip_conns           0x122             ./uip/uip.o
+com_send_buffer     0xd               ./com.o
+REVID               0x1               ./hardware/enc28j60.o
+Enc28j60Bank        0x1               ./hardware/enc28j60.o
+uip_listenports     0x14              ./uip/uip.o
+uip_draddr          0x4               ./uip/uip.o
+uip_netmask         0x4               ./uip/uip.o
+uip_hostaddr        0x4               ./uip/uip.o
+uip_buf             0x18e             ./uip/uip.o
+uip_slen            0x2               ./uip/uip.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+text             0x0000000000000000 0x0000000000002000 xr
+data             0x0000000000800060 0x000000000000ffa0 rw !x
+eeprom           0x0000000000810000 0x0000000000010000 rw !x
+fuse             0x0000000000820000 0x0000000000000400 rw !x
+lock             0x0000000000830000 0x0000000000000400 rw !x
+signature        0x0000000000840000 0x0000000000000400 rw !x
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+LOAD /usr/lib/gcc/avr/4.7.0/../../../../avr/lib/avr4/crtm8.o
+LOAD ./uip/timer.o
+LOAD ./uip/uip.o
+LOAD ./uip/uip_arp.o
+LOAD ./hardware/enc28j60.o
+LOAD ./hardware/spi.o
+LOAD ./apps/UDP-app.o
+LOAD ./apps/uip-app.o
+LOAD ./clock-arch.o
+LOAD ./com.o
+LOAD ./ethernet.o
+LOAD ./main.o
+LOAD ./net.o
+LOAD /usr/lib/gcc/avr/4.7.0/avr4/libgcc.a
+LOAD /usr/lib/gcc/avr/4.7.0/../../../../avr/lib/avr4/libc.a
+LOAD /usr/lib/gcc/avr/4.7.0/avr4/libgcc.a
+
+.hash
+ *(.hash)
+
+.dynsym
+ *(.dynsym)
+
+.dynstr
+ *(.dynstr)
+
+.gnu.version
+ *(.gnu.version)
+
+.gnu.version_d
+ *(.gnu.version_d)
+
+.gnu.version_r
+ *(.gnu.version_r)
+
+.rel.init
+ *(.rel.init)
+
+.rela.init
+ *(.rela.init)
+
+.rel.text
+ *(.rel.text)
+ *(.rel.text.*)
+ *(.rel.gnu.linkonce.t*)
+
+.rela.text
+ *(.rela.text)
+ *(.rela.text.*)
+ *(.rela.gnu.linkonce.t*)
+
+.rel.fini
+ *(.rel.fini)
+
+.rela.fini
+ *(.rela.fini)
+
+.rel.rodata
+ *(.rel.rodata)
+ *(.rel.rodata.*)
+ *(.rel.gnu.linkonce.r*)
+
+.rela.rodata
+ *(.rela.rodata)
+ *(.rela.rodata.*)
+ *(.rela.gnu.linkonce.r*)
+
+.rel.data
+ *(.rel.data)
+ *(.rel.data.*)
+ *(.rel.gnu.linkonce.d*)
+
+.rela.data
+ *(.rela.data)
+ *(.rela.data.*)
+ *(.rela.gnu.linkonce.d*)
+
+.rel.ctors
+ *(.rel.ctors)
+
+.rela.ctors
+ *(.rela.ctors)
+
+.rel.dtors
+ *(.rel.dtors)
+
+.rela.dtors
+ *(.rela.dtors)
+
+.rel.got
+ *(.rel.got)
+
+.rela.got
+ *(.rela.got)
+
+.rel.bss
+ *(.rel.bss)
+
+.rela.bss
+ *(.rela.bss)
+
+.rel.plt
+ *(.rel.plt)
+
+.rela.plt
+ *(.rela.plt)
+
+.text           0x0000000000000000     0x1d70
+ *(.vectors)
+ .vectors       0x0000000000000000       0x26 /usr/lib/gcc/avr/4.7.0/../../../../avr/lib/avr4/crtm8.o
+                0x0000000000000000                __vectors
+                0x0000000000000000                __vector_default
+ *(.vectors)
+ *(.progmem.gcc*)
+ .progmem.gcc_sw_table
+                0x0000000000000026       0x10 ./uip/uip.o
+ *(.progmem*)
+ .progmem.data  0x0000000000000036        0x7 ./ethernet.o
+                0x000000000000003e                . = ALIGN (0x2)
+ *fill*         0x000000000000003d        0x1 00
+                0x000000000000003e                __trampolines_start = .
+ *(.trampolines)
+ .trampolines   0x000000000000003e        0x0 linker stubs
+ *(.trampolines*)
+                0x000000000000003e                __trampolines_end = .
+ *(.jumptables)
+ *(.jumptables*)
+ *(.lowtext)
+ *(.lowtext*)
+                0x000000000000003e                __ctors_start = .
+ *(.ctors)
+                0x000000000000003e                __ctors_end = .
+                0x000000000000003e                __dtors_start = .
+ *(.dtors)
+                0x000000000000003e                __dtors_end = .
+ SORT(*)(.ctors)
+ SORT(*)(.dtors)
+ *(.init0)
+ .init0         0x000000000000003e        0x0 /usr/lib/gcc/avr/4.7.0/../../../../avr/lib/avr4/crtm8.o
+                0x000000000000003e                __init
+ *(.init0)
+ *(.init1)
+ *(.init1)
+ *(.init2)
+ .init2         0x000000000000003e        0xc /usr/lib/gcc/avr/4.7.0/../../../../avr/lib/avr4/crtm8.o
+ *(.init2)
+ *(.init3)
+ *(.init3)
+ *(.init4)
+ .init4         0x000000000000004a       0x16 /usr/lib/gcc/avr/4.7.0/avr4/libgcc.a(_copy_data.o)
+                0x000000000000004a                __do_copy_data
+ .init4         0x0000000000000060       0x10 /usr/lib/gcc/avr/4.7.0/avr4/libgcc.a(_clear_bss.o)
+                0x0000000000000060                __do_clear_bss
+ *(.init4)
+ *(.init5)
+ *(.init5)
+ *(.init6)
+ *(.init6)
+ *(.init7)
+ *(.init7)
+ *(.init8)
+ *(.init8)
+ *(.init9)
+ .init9         0x0000000000000070        0x4 /usr/lib/gcc/avr/4.7.0/../../../../avr/lib/avr4/crtm8.o
+ *(.init9)
+ *(.text)
+ .text          0x0000000000000074        0x2 /usr/lib/gcc/avr/4.7.0/../../../../avr/lib/avr4/crtm8.o
+                0x0000000000000074                __vector_12
+                0x0000000000000074                __bad_interrupt
+                0x0000000000000074                __vector_6
+                0x0000000000000074                __vector_3
+                0x0000000000000074                __vector_11
+                0x0000000000000074                __vector_13
+                0x0000000000000074                __vector_17
+                0x0000000000000074                __vector_7
+                0x0000000000000074                __vector_5
+                0x0000000000000074                __vector_4
+                0x0000000000000074                __vector_2
+                0x0000000000000074                __vector_15
+                0x0000000000000074                __vector_8
+                0x0000000000000074                __vector_14
+                0x0000000000000074                __vector_10
+                0x0000000000000074                __vector_16
+                0x0000000000000074                __vector_18
+ .text          0x0000000000000076       0x66 ./uip/timer.o
+                0x0000000000000076                timer_set
+                0x000000000000008c                timer_reset
+                0x00000000000000a0                timer_restart
+                0x00000000000000b2                timer_expired
+ .text          0x00000000000000dc      0xeba ./uip/uip.o
+                0x0000000000000128                uip_setipid
+                0x0000000000000132                uip_add32
+                0x00000000000001a0                uip_chksum
+                0x00000000000001b2                uip_ipchksum
+                0x00000000000001d2                uip_tcpchksum
+                0x0000000000000216                uip_init
+                0x0000000000000256                uip_connect
+                0x0000000000000376                uip_unlisten
+                0x00000000000003aa                uip_listen
+                0x00000000000003dc                uip_process
+                0x0000000000000f68                htons
+                0x0000000000000f70                uip_send
+ .text          0x0000000000000f96      0x4c0 ./uip/uip_arp.o
+                0x00000000000010ac                uip_arp_init
+                0x00000000000010d6                uip_arp_timer
+                0x000000000000112a                uip_arp_arpin
+                0x000000000000126a                uip_arp_out
+ .text          0x0000000000001456      0x3e2 ./hardware/enc28j60.o
+                0x0000000000001456                enc28j60ReadOp
+                0x0000000000001484                enc28j60WriteOp
+                0x00000000000014a8                enc28j60ReadBuffer
+                0x00000000000014cc                enc28j60WriteBuffer
+                0x00000000000014f0                enc28j60SetBank
+                0x0000000000001522                enc28j60Read
+                0x000000000000153e                enc28j60Write
+                0x0000000000001560                enc28j60PhyRead
+                0x000000000000159a                enc28j60PhyWrite
+                0x00000000000015d0                enc28j60Init
+                0x00000000000016d6                enc28j60PacketSend
+                0x000000000000171c                enc28j60PacketReceive
+ .text          0x0000000000001838       0x8c ./hardware/spi.o
+                0x0000000000001838                SPI_init
+                0x000000000000186a                SPI_ReadWrite
+                0x0000000000001874                SPI_FastMem2Write
+                0x000000000000189c                SPI_FastRead2Mem
+                0x00000000000018be                SPI_GetInitState
+ .text          0x00000000000018c4        0x0 ./apps/UDP-app.o
+ .text          0x00000000000018c4       0x74 ./apps/uip-app.o
+                0x00000000000018c4                uipAppInit
+                0x00000000000018ca                acked
+                0x00000000000018d0                newdata
+                0x00000000000018fe                senddata
+                0x0000000000001910                uipAppCall
+ .text          0x0000000000001938       0x58 ./clock-arch.o
+                0x0000000000001938                __vector_9
+                0x000000000000196c                clock_init
+                0x000000000000197a                clock_time
+ .text          0x0000000000001990      0x13e ./com.o
+                0x0000000000001990                com_wait_low
+                0x0000000000001996                com_wait_high
+                0x000000000000199c                com_send_ack
+                0x00000000000019a4                com_mark_active_and_wait_ack
+                0x00000000000019ac                com_get_command
+                0x00000000000019bc                com_disconnect
+                0x00000000000019d8                com_config
+                0x00000000000019f6                com_connect
+                0x0000000000001a1a                com_init
+                0x0000000000001a2a                com_write_nibble
+                0x0000000000001a36                com_read_nibble
+                0x0000000000001a46                com_write_byte
+                0x0000000000001a56                com_read_byte
+                0x0000000000001a68                com_send_chunk
+                0x0000000000001a92                com_receive_chunk
+                0x0000000000001ac8                com_check
+ .text          0x0000000000001ace      0x1d6 ./ethernet.o
+                0x0000000000001ace                ethernet_notify
+                0x0000000000001b04                ethernet_init
+                0x0000000000001b6e                ethernet_handle_timer
+                0x0000000000001be8                ethernet_handle_pkgs
+                0x0000000000001c7c                ethernet_handle
+                0x0000000000001c80                __vector_1
+ .text          0x0000000000001ca4        0x0 ./main.o
+ .text          0x0000000000001ca4       0x3c ./net.o
+                0x0000000000001ca4                net_init
+                0x0000000000001ca6                net_notify
+                0x0000000000001caa                net_receive
+ .text          0x0000000000001ce0        0x0 /usr/lib/gcc/avr/4.7.0/avr4/libgcc.a(_exit.o)
+ .text          0x0000000000001ce0        0x0 /usr/lib/gcc/avr/4.7.0/avr4/libgcc.a(_copy_data.o)
+ .text          0x0000000000001ce0        0x0 /usr/lib/gcc/avr/4.7.0/avr4/libgcc.a(_clear_bss.o)
+ .text          0x0000000000001ce0        0x0 /usr/lib/gcc/avr/4.7.0/../../../../avr/lib/avr4/libc.a(memcpy_P.o)
+ .text          0x0000000000001ce0        0x0 /usr/lib/gcc/avr/4.7.0/../../../../avr/lib/avr4/libc.a(memcpy.o)
+ .text          0x0000000000001ce0        0x0 /usr/lib/gcc/avr/4.7.0/../../../../avr/lib/avr4/libc.a(memset.o)
+                0x0000000000001ce0                . = ALIGN (0x2)
+ *(.text.*)
+ .text.unlikely
+                0x0000000000001ce0       0x32 ./uip/uip.o
+ .text.startup  0x0000000000001d12       0x28 ./main.o
+                0x0000000000001d12                main
+ .text.libgcc.mul
+                0x0000000000001d3a        0x0 /usr/lib/gcc/avr/4.7.0/avr4/libgcc.a(_exit.o)
+ .text.libgcc.div
+                0x0000000000001d3a        0x0 /usr/lib/gcc/avr/4.7.0/avr4/libgcc.a(_exit.o)
+ .text.libgcc   0x0000000000001d3a        0x0 /usr/lib/gcc/avr/4.7.0/avr4/libgcc.a(_exit.o)
+ .text.libgcc.prologue
+                0x0000000000001d3a        0x0 /usr/lib/gcc/avr/4.7.0/avr4/libgcc.a(_exit.o)
+ .text.libgcc.builtins
+                0x0000000000001d3a        0x0 /usr/lib/gcc/avr/4.7.0/avr4/libgcc.a(_exit.o)
+ .text.libgcc.fmul
+                0x0000000000001d3a        0x0 /usr/lib/gcc/avr/4.7.0/avr4/libgcc.a(_exit.o)
+ .text.libgcc.mul
+                0x0000000000001d3a        0x0 /usr/lib/gcc/avr/4.7.0/avr4/libgcc.a(_copy_data.o)
+ .text.libgcc.div
+                0x0000000000001d3a        0x0 /usr/lib/gcc/avr/4.7.0/avr4/libgcc.a(_copy_data.o)
+ .text.libgcc   0x0000000000001d3a        0x0 /usr/lib/gcc/avr/4.7.0/avr4/libgcc.a(_copy_data.o)
+ .text.libgcc.prologue
+                0x0000000000001d3a        0x0 /usr/lib/gcc/avr/4.7.0/avr4/libgcc.a(_copy_data.o)
+ .text.libgcc.builtins
+                0x0000000000001d3a        0x0 /usr/lib/gcc/avr/4.7.0/avr4/libgcc.a(_copy_data.o)
+ .text.libgcc.fmul
+                0x0000000000001d3a        0x0 /usr/lib/gcc/avr/4.7.0/avr4/libgcc.a(_copy_data.o)
+ .text.libgcc.mul
+                0x0000000000001d3a        0x0 /usr/lib/gcc/avr/4.7.0/avr4/libgcc.a(_clear_bss.o)
+ .text.libgcc.div
+                0x0000000000001d3a        0x0 /usr/lib/gcc/avr/4.7.0/avr4/libgcc.a(_clear_bss.o)
+ .text.libgcc   0x0000000000001d3a        0x0 /usr/lib/gcc/avr/4.7.0/avr4/libgcc.a(_clear_bss.o)
+ .text.libgcc.prologue
+                0x0000000000001d3a        0x0 /usr/lib/gcc/avr/4.7.0/avr4/libgcc.a(_clear_bss.o)
+ .text.libgcc.builtins
+                0x0000000000001d3a        0x0 /usr/lib/gcc/avr/4.7.0/avr4/libgcc.a(_clear_bss.o)
+ .text.libgcc.fmul
+                0x0000000000001d3a        0x0 /usr/lib/gcc/avr/4.7.0/avr4/libgcc.a(_clear_bss.o)
+ .text.avr-libc
+                0x0000000000001d3a       0x12 /usr/lib/gcc/avr/4.7.0/../../../../avr/lib/avr4/libc.a(memcpy_P.o)
+                0x0000000000001d3a                memcpy_P
+ .text.avr-libc
+                0x0000000000001d4c       0x12 /usr/lib/gcc/avr/4.7.0/../../../../avr/lib/avr4/libc.a(memcpy.o)
+                0x0000000000001d4c                memcpy
+ .text.avr-libc
+                0x0000000000001d5e        0xe /usr/lib/gcc/avr/4.7.0/../../../../avr/lib/avr4/libc.a(memset.o)
+                0x0000000000001d5e                memset
+                0x0000000000001d6c                . = ALIGN (0x2)
+ *(.fini9)
+ .fini9         0x0000000000001d6c        0x0 /usr/lib/gcc/avr/4.7.0/avr4/libgcc.a(_exit.o)
+                0x0000000000001d6c                exit
+                0x0000000000001d6c                _exit
+ *(.fini9)
+ *(.fini8)
+ *(.fini8)
+ *(.fini7)
+ *(.fini7)
+ *(.fini6)
+ *(.fini6)
+ *(.fini5)
+ *(.fini5)
+ *(.fini4)
+ *(.fini4)
+ *(.fini3)
+ *(.fini3)
+ *(.fini2)
+ *(.fini2)
+ *(.fini1)
+ *(.fini1)
+ *(.fini0)
+ .fini0         0x0000000000001d6c        0x4 /usr/lib/gcc/avr/4.7.0/avr4/libgcc.a(_exit.o)
+ *(.fini0)
+                0x0000000000001d70                _etext = .
+
+.data           0x0000000000800060        0x6 load address 0x0000000000001d70
+                0x0000000000800060                PROVIDE (__data_start, .)
+ *(.data)
+ .data          0x0000000000800060        0x0 /usr/lib/gcc/avr/4.7.0/../../../../avr/lib/avr4/crtm8.o
+ .data          0x0000000000800060        0x0 ./uip/timer.o
+ .data          0x0000000000800060        0x0 ./uip/uip.o
+ .data          0x0000000000800060        0x0 ./uip/uip_arp.o
+ .data          0x0000000000800060        0x0 ./hardware/enc28j60.o
+ .data          0x0000000000800060        0x0 ./hardware/spi.o
+ .data          0x0000000000800060        0x0 ./apps/UDP-app.o
+ .data          0x0000000000800060        0x0 ./apps/uip-app.o
+ .data          0x0000000000800060        0x0 ./clock-arch.o
+ .data          0x0000000000800060        0x0 ./com.o
+ .data          0x0000000000800060        0x0 ./ethernet.o
+ .data          0x0000000000800060        0x0 ./main.o
+ .data          0x0000000000800060        0x0 ./net.o
+ .data          0x0000000000800060        0x0 /usr/lib/gcc/avr/4.7.0/avr4/libgcc.a(_exit.o)
+ .data          0x0000000000800060        0x0 /usr/lib/gcc/avr/4.7.0/avr4/libgcc.a(_copy_data.o)
+ .data          0x0000000000800060        0x0 /usr/lib/gcc/avr/4.7.0/avr4/libgcc.a(_clear_bss.o)
+ .data          0x0000000000800060        0x0 /usr/lib/gcc/avr/4.7.0/../../../../avr/lib/avr4/libc.a(memcpy_P.o)
+ .data          0x0000000000800060        0x0 /usr/lib/gcc/avr/4.7.0/../../../../avr/lib/avr4/libc.a(memcpy.o)
+ .data          0x0000000000800060        0x0 /usr/lib/gcc/avr/4.7.0/../../../../avr/lib/avr4/libc.a(memset.o)
+ *(.data*)
+ *(.rodata)
+ .rodata        0x0000000000800060        0x6 ./uip/uip_arp.o
+ *(.rodata*)
+ *(.gnu.linkonce.d*)
+                0x0000000000800066                . = ALIGN (0x2)
+                0x0000000000800066                _edata = .
+                0x0000000000800066                PROVIDE (__data_end, .)
+
+.bss            0x0000000000800066      0x37d
+                0x0000000000800066                PROVIDE (__bss_start, .)
+ *(.bss)
+ .bss           0x0000000000800066        0x0 /usr/lib/gcc/avr/4.7.0/../../../../avr/lib/avr4/crtm8.o
+ .bss           0x0000000000800066        0x0 ./uip/timer.o
+ .bss           0x0000000000800066       0x12 ./uip/uip.o
+                0x0000000000800066                uip_ethaddr
+ .bss           0x0000000000800078       0x60 ./uip/uip_arp.o
+ .bss           0x00000000008000d8        0x0 ./hardware/enc28j60.o
+ .bss           0x00000000008000d8        0x1 ./hardware/spi.o
+                0x00000000008000d8                SPI_InitState
+ .bss           0x00000000008000d9        0x0 ./apps/UDP-app.o
+ .bss           0x00000000008000d9        0x0 ./apps/uip-app.o
+ .bss           0x00000000008000d9        0x2 ./clock-arch.o
+                0x00000000008000d9                clock_datetime
+ .bss           0x00000000008000db        0x2 ./com.o
+                0x00000000008000db                com_receive_buffer_size
+                0x00000000008000dc                com_send_buffer_size
+ .bss           0x00000000008000dd        0x1 ./ethernet.o
+                0x00000000008000dd                eth_data_present
+ .bss           0x00000000008000de        0x0 ./main.o
+ .bss           0x00000000008000de        0x0 ./net.o
+ .bss           0x00000000008000de        0x0 /usr/lib/gcc/avr/4.7.0/avr4/libgcc.a(_exit.o)
+ .bss           0x00000000008000de        0x0 /usr/lib/gcc/avr/4.7.0/avr4/libgcc.a(_copy_data.o)
+ .bss           0x00000000008000de        0x0 /usr/lib/gcc/avr/4.7.0/avr4/libgcc.a(_clear_bss.o)
+ .bss           0x00000000008000de        0x0 /usr/lib/gcc/avr/4.7.0/../../../../avr/lib/avr4/libc.a(memcpy_P.o)
+ .bss           0x00000000008000de        0x0 /usr/lib/gcc/avr/4.7.0/../../../../avr/lib/avr4/libc.a(memcpy.o)
+ .bss           0x00000000008000de        0x0 /usr/lib/gcc/avr/4.7.0/../../../../avr/lib/avr4/libc.a(memset.o)
+ *(.bss*)
+ *(COMMON)
+ COMMON         0x00000000008000de      0x2df ./uip/uip.o
+                0x00000000008000de                uip_len
+                0x00000000008000e0                uip_sappdata
+                0x00000000008000e2                uip_acc32
+                0x00000000008000e6                uip_flags
+                0x00000000008000e7                uip_appdata
+                0x00000000008000e9                uip_conn
+                0x00000000008000eb                uip_conns
+                0x000000000080020d                uip_listenports
+                0x0000000000800221                uip_draddr
+                0x0000000000800225                uip_netmask
+                0x0000000000800229                uip_hostaddr
+                0x000000000080022d                uip_buf
+                0x00000000008003bb                uip_slen
+ COMMON         0x00000000008003bd        0x4 ./hardware/enc28j60.o
+                0x00000000008003bd                NextPacketPtr
+                0x00000000008003bf                REVID
+                0x00000000008003c0                Enc28j60Bank
+ COMMON         0x00000000008003c1       0x1a ./com.o
+                0x00000000008003c1                com_receive_buffer
+                0x00000000008003ce                com_send_buffer
+ COMMON         0x00000000008003db        0x8 ./ethernet.o
+                0x00000000008003db                arp_timer
+                0x00000000008003df                periodic_timer
+                0x00000000008003e3                PROVIDE (__bss_end, .)
+                0x0000000000001d70                __data_load_start = LOADADDR (.data)
+                0x0000000000001d76                __data_load_end = (__data_load_start + SIZEOF (.data))
+
+.noinit         0x00000000008003e3        0x0
+                0x00000000008003e3                PROVIDE (__noinit_start, .)
+ *(.noinit*)
+                0x00000000008003e3                PROVIDE (__noinit_end, .)
+                0x00000000008003e3                _end = .
+                0x00000000008003e3                PROVIDE (__heap_start, .)
+
+.eeprom         0x0000000000810000        0x0
+ *(.eeprom*)
+                0x0000000000810000                __eeprom_end = .
+
+.fuse
+ *(.fuse)
+ *(.lfuse)
+ *(.hfuse)
+ *(.efuse)
+
+.lock
+ *(.lock*)
+
+.signature
+ *(.signature*)
+
+.stab           0x0000000000000000      0xa38
+ *(.stab)
+ .stab          0x0000000000000000      0x6cc /usr/lib/gcc/avr/4.7.0/../../../../avr/lib/avr4/crtm8.o
+ .stab          0x00000000000006cc       0x6c /usr/lib/gcc/avr/4.7.0/avr4/libgcc.a(_exit.o)
+                                         0x78 (size before relaxing)
+ .stab          0x0000000000000738       0xd8 /usr/lib/gcc/avr/4.7.0/avr4/libgcc.a(_copy_data.o)
+                                         0xe4 (size before relaxing)
+ .stab          0x0000000000000810       0xb4 /usr/lib/gcc/avr/4.7.0/avr4/libgcc.a(_clear_bss.o)
+                                         0xc0 (size before relaxing)
+ .stab          0x00000000000008c4       0x84 /usr/lib/gcc/avr/4.7.0/../../../../avr/lib/avr4/libc.a(memcpy_P.o)
+                                         0x90 (size before relaxing)
+ .stab          0x0000000000000948       0x84 /usr/lib/gcc/avr/4.7.0/../../../../avr/lib/avr4/libc.a(memcpy.o)
+                                         0x90 (size before relaxing)
+ .stab          0x00000000000009cc       0x6c /usr/lib/gcc/avr/4.7.0/../../../../avr/lib/avr4/libc.a(memset.o)
+                                         0x78 (size before relaxing)
+
+.stabstr        0x0000000000000000      0x153
+ *(.stabstr)
+ .stabstr       0x0000000000000000      0x153 /usr/lib/gcc/avr/4.7.0/../../../../avr/lib/avr4/crtm8.o
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment        0x0000000000000000       0x11
+ *(.comment)
+ .comment       0x0000000000000000       0x11 ./uip/timer.o
+                                         0x12 (size before relaxing)
+ .comment       0x0000000000000000       0x12 ./uip/uip.o
+ .comment       0x0000000000000000       0x12 ./uip/uip_arp.o
+ .comment       0x0000000000000000       0x12 ./hardware/enc28j60.o
+ .comment       0x0000000000000000       0x12 ./apps/uip-app.o
+ .comment       0x0000000000000000       0x12 ./clock-arch.o
+ .comment       0x0000000000000000       0x12 ./com.o
+ .comment       0x0000000000000000       0x12 ./ethernet.o
+ .comment       0x0000000000000000       0x12 ./main.o
+ .comment       0x0000000000000000       0x12 ./net.o
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges
+ *(.debug_aranges)
+
+.debug_pubnames
+ *(.debug_pubnames)
+
+.debug_info
+ *(.debug_info)
+ *(.gnu.linkonce.wi.*)
+
+.debug_abbrev
+ *(.debug_abbrev)
+
+.debug_line
+ *(.debug_line)
+
+.debug_frame
+ *(.debug_frame)
+
+.debug_str
+ *(.debug_str)
+
+.debug_loc
+ *(.debug_loc)
+
+.debug_macinfo
+ *(.debug_macinfo)
+OUTPUT(Wetter_uIP.elf elf32-avr)
+LOAD linker stubs
